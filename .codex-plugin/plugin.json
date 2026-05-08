@@ -1,7 +1,7 @@
 {
-  "name": "delivery-workflow-agent",
+  "name": "ship",
   "version": "1.0.0",
-  "description": "Improves Git, PR, review, release notes, safe changes, task planning, and end-to-end delivery quality for Codex work.",
+  "description": "Git, PR, review, release note, dependency safety, task planning, and end-to-end frontend delivery workflows.",
   "author": {
     "name": "Milan Bourbeck",
     "url": "https://github.com/milanbourbeck"
@@ -11,17 +11,19 @@
   "license": "MIT",
   "keywords": [
     "codex",
-    "plugin",
-    "frontend",
-    "ui",
-    "ux",
-    "quality"
+    "ship",
+    "git",
+    "pr",
+    "delivery",
+    "release",
+    "dependencies",
+    "workflow"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Delivery Workflow Agent",
-    "shortDescription": "Improves Git, PR, review, release notes, safe changes, task planning, and end-to-end delivery quality for Codex work.",
-    "longDescription": "Improves Git, PR, review, release notes, safe changes, task planning, and end-to-end delivery quality for Codex work.",
+    "shortDescription": "Git, PR, dependency, release, and end-to-end delivery workflows.",
+    "longDescription": "Git, PR, review, release note, dependency safety, task planning, and end-to-end frontend delivery workflows.",
     "developerName": "Milan Bourbeck",
     "category": "Engineering",
     "capabilities": [
@@ -32,9 +34,9 @@
     "websiteURL": "https://github.com/milanbourbeck/codex-plugin-delivery-workflow-agent",
     "brandColor": "#2563EB",
     "defaultPrompt": [
-      "Prepare a clean PR.",
-      "Orchestrate end-to-end delivery.",
-      "Manage dependencies safely."
+      "@ship $e2e",
+      "@ship $pr",
+      "@ship $deps"
     ]
   }
 }

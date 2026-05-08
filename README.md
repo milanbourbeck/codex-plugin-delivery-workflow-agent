@@ -2,45 +2,62 @@
 
 ## Purpose
 
-Safe Git, PR, dependency, release, and end-to-end delivery workflows for Codex-driven frontend work.
+Git, PR, review, release note, dependency safety, task planning, and end-to-end frontend delivery workflows.
 
 ## Included Skills
 
-- `git-pr-quality-agent`
-- `end-to-end-project-orchestrator`
-- `safe-dependency-manager`
+- `$pr`
+- `$e2e`
+- `$deps`
+
+## Quick Commands
+
+- @ship $e2e — orchestrate idea-to-PR workflow
+- @ship $pr — prepare PR summary and delivery notes
+- @ship $deps — manage dependencies safely
 
 ## When To Use
 
-- The user wants delivery-ready commits or PR text.
-- A frontend task should be taken from idea to tested delivery.
-- Dependencies need to be added, removed, updated, or rationalized.
+- Use `@ship` when you want this plugin's focused workflow.
+- Use the short skill handles with `$` for explicit control.
+- Use implicit selection when the request matches a skill description.
 
 ## When Not To Use
 
-- No repository exists and the user only wants a conceptual answer.
-- The task is a tiny single-file answer with no Git workflow.
-- The user explicitly asks not to touch Git.
+- Do not use this plugin outside its focused domain.
+- Do not rely on keywords as invocation aliases.
+- Do not add dependencies unless the underlying skill explicitly supports implementation and the project needs them.
 
 ## Installation
 
-Install this plugin from the Premium Codex Workflows marketplace, or add this repository directly as a Git-backed plugin source.
+Install this plugin from the Premium Codex Workflows marketplace.
 
 Repository: `https://github.com/milanbourbeck/codex-plugin-delivery-workflow-agent.git`
 
 ## Example Prompts
 
-- `@premium-html-uiux integriere den Premium HTML UI/UX Stack in dieses Vanilla HTML Projekt. Installiere nur, was wirklich gebraucht wird.`
-- `$modernize-existing-html-ui analysiere diese Website und verbessere UI, Responsiveness, Semantik und Fokuszustände minimal-invasiv.`
-- `$visual-qa-playwright prüfe die Seite in Desktop, Tablet und Mobile, dokumentiere Layout-Probleme und behebe die wichtigsten.`
-- `$accessibility-optimizer prüfe Navigation, Formulare, Dialoge, Fokuszustände und reduced-motion.`
-- `$performance-optimizer finde unnötige Bundle-Kosten, Bildprobleme, Layout Shifts und schwere Animationen.`
-- `$build-design-system-foundation erstelle eine konsistente Designsystem-Basis für dieses HTML/Tailwind Projekt.`
-- `$end-to-end-project-orchestrator bringe diese Landingpage von Ist-Zustand zu polished, tested und PR-ready.`
+1. `@dd $brief Create a strong visual direction for this landing page. Do not edit code yet.`
+2. `@dd $design-md Create a DESIGN.md source of truth for this project.`
+3. `@ui $stack Integrate the premium Vanilla HTML UI/UX stack. Install only what is actually needed.`
+4. `@ui $modernize Improve this existing HTML/CSS/JS UI with better hierarchy, responsiveness, semantics, and focus states.`
+5. `@qa $visual Test this frontend in desktop, tablet, and mobile viewports. Document issues and fix the most important ones.`
+6. `@qa $a11y Improve keyboard navigation, focus states, forms, dialogs, labels, and reduced-motion behavior.`
+7. `@qa $perf Find bundle, image, layout shift, font, and animation performance issues. Fix what is safe.`
+8. `@ship $e2e Take this frontend task from analysis to implementation, QA, polish, and PR-ready delivery.`
+
+## Migration Note
+
+- Old plugin repository names may stay unchanged.
+- New Codex plugin handle: `@ship`.
+- New skill handles use `$`.
+- `git-pr-quality-agent` is now `$pr`
+- `end-to-end-project-orchestrator` is now `$e2e`
+- `safe-dependency-manager` is now `$deps`
+- If Codex does not show updates immediately, restart or reload Codex and reinstall or refresh the marketplace.
 
 ## Maintenance
 
-- Keep skills narrow and descriptions explicit.
+- Keep the plugin `name` field as the canonical handle.
+- Keep each skill folder name and frontmatter `name` in sync.
 - Bump `.codex-plugin/plugin.json` version for meaningful releases.
 - Run `node scripts/validate-plugin.mjs` before pushing.
-- Add dependencies to templates only when they are the default for that plugin's workflow.

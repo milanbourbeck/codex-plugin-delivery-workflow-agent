@@ -1,11 +1,15 @@
 ---
-name: git-pr-quality-agent
-description: Use when the user wants clean Git commits, PR descriptions, review summaries, risk notes, test evidence, and delivery-ready code changes.
+name: e2e
+description: Orchestrate frontend work from idea to implementation, QA, polish, and PR-ready delivery.
 ---
 
-# git-pr-quality-agent
+# e2e
 
-Use when the user wants clean Git commits, PR descriptions, review summaries, risk notes, test evidence, and delivery-ready code changes.
+Use when the user wants Codex to take a frontend task from idea to implemented, tested, audited, polished, and PR-ready delivery. This skill coordinates other installed skills but must avoid installing unnecessary dependencies.
+
+## Handle Migration
+
+Canonical skill handle: `$e2e`. Legacy internal name: `end-to-end-project-orchestrator -> e2e`.
 
 ## Global Rules
 
@@ -23,10 +27,10 @@ Use when the user wants clean Git commits, PR descriptions, review summaries, ri
 
 ## Workflow
 
-1. Check Git status before making changes.
-2. Touch only relevant files and preserve unrelated user work.
-3. Avoid random formatting churn.
-4. Prefer small coherent commits when committing is requested.
-5. Check for secrets before commit.
-6. Prepare PR content with Summary, Changes, UI/UX Impact, Tests, Risks, and Screenshots if available.
-7. Include build/test evidence and any checks that could not run.
+1. Interpret the task and define the smallest useful delivery slice.
+2. Analyze project architecture, scripts, dependencies, and active changes.
+3. Choose only relevant skills: premium HTML integration, design system work, frontend audit, visual QA, accessibility, performance, or PR delivery.
+4. Create a plan for substantial work.
+5. Execute in phases and validate after each large phase.
+6. Split scope when the work grows beyond a coherent delivery unit.
+7. Finish with changed files, checks, risks, and next actions.

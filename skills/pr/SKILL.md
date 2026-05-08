@@ -1,11 +1,15 @@
 ---
-name: safe-dependency-manager
-description: Use when the user wants to add, remove, update, or rationalize frontend dependencies safely.
+name: pr
+description: Prepare clean PR descriptions, review summaries, risk notes, and test evidence.
 ---
 
-# safe-dependency-manager
+# pr
 
-Use when the user wants to add, remove, update, or rationalize frontend dependencies safely.
+Use when the user wants clean Git commits, PR descriptions, review summaries, risk notes, test evidence, and delivery-ready code changes.
+
+## Handle Migration
+
+Canonical skill handle: `$pr`. Legacy internal name: `git-pr-quality-agent -> pr`.
 
 ## Global Rules
 
@@ -23,9 +27,10 @@ Use when the user wants to add, remove, update, or rationalize frontend dependen
 
 ## Workflow
 
-1. Inspect `package.json`, lockfiles, imports, build tooling, and package manager.
-2. Detect redundant libraries, conflicting tools, unneeded UI stacks, and bundle-cost risks.
-3. Add dependencies only when the project need is clear.
-4. Respect the existing lockfile and package manager.
-5. Run install/build checks when possible.
-6. Suggest no-dependency alternatives when a package is unnecessary.
+1. Check Git status before making changes.
+2. Touch only relevant files and preserve unrelated user work.
+3. Avoid random formatting churn.
+4. Prefer small coherent commits when committing is requested.
+5. Check for secrets before commit.
+6. Prepare PR content with Summary, Changes, UI/UX Impact, Tests, Risks, and Screenshots if available.
+7. Include build/test evidence and any checks that could not run.
