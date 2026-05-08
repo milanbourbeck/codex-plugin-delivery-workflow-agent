@@ -1,0 +1,40 @@
+{
+  "name": "delivery-workflow-agent",
+  "version": "1.0.0",
+  "description": "Improves Git, PR, review, release notes, safe changes, task planning, and end-to-end delivery quality for Codex work.",
+  "author": {
+    "name": "Milan Bourbeck",
+    "url": "https://github.com/milanbourbeck"
+  },
+  "homepage": "https://github.com/milanbourbeck/codex-plugin-delivery-workflow-agent",
+  "repository": "https://github.com/milanbourbeck/codex-plugin-delivery-workflow-agent",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "plugin",
+    "frontend",
+    "ui",
+    "ux",
+    "quality"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Delivery Workflow Agent",
+    "shortDescription": "Improves Git, PR, review, release notes, safe changes, task planning, and end-to-end delivery quality for Codex work.",
+    "longDescription": "Improves Git, PR, review, release notes, safe changes, task planning, and end-to-end delivery quality for Codex work.",
+    "developerName": "Milan Bourbeck",
+    "category": "Engineering",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Execute"
+    ],
+    "websiteURL": "https://github.com/milanbourbeck/codex-plugin-delivery-workflow-agent",
+    "brandColor": "#2563EB",
+    "defaultPrompt": [
+      "Prepare a clean PR.",
+      "Orchestrate end-to-end delivery.",
+      "Manage dependencies safely."
+    ]
+  }
+}
